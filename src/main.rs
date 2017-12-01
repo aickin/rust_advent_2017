@@ -1,10 +1,7 @@
-mod day1_2016;
-mod day1_2017;
+mod day1;
 
 fn main() {
-    println!("Let's do this!");
-    println!("2016 day 1, puzzle 1: {}", day1_2016::puzzle1());
-    println!("2016 day 1, puzzle 2: {}", day1_2016::puzzle2());
-    println!("2017 day 1, puzzle 1: {}", day1_2017::puzzle1());
-    println!("2017 day 1, puzzle 1: {}", day1_2017::puzzle2());
+    println!("Let's do this! Advent 2017!!!");
+    println!("day 1, puzzle 1: {}", day1::puzzle1());
+    println!("day 1, puzzle 1: {}", day1::puzzle2());
 }
