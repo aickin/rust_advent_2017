@@ -159,19 +159,19 @@ pub fn puzzle2() -> i32 {
   let mut spiral = Spiral::new();
   let mut grid = Grid::new();
 
-  grid.set( &Point { x: 0, y: 0 }, 1);
-  spiral.next();
-
   let mut last_value = 0;
   while last_value < 347991 {
     let point = spiral.next().unwrap();
 
-    last_value = point.surrounding_points().fold(0, |total, point| {
-      match grid.get(&point) {
-        Some(val) => total + val,
-        None => total,
-      }
-    });
+    last_value = match point {
+      Point { x: 0, y: 0 } => 1,
+      _ => point.surrounding_points().fold(0, |total, point| {
+        match grid.get(&point) {
+          Some(val) => total + val,
+          None => total,
+        }
+      })
+    };
 
     grid.set(&point, last_value);
   }
