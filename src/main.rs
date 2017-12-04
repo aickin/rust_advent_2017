@@ -1,6 +1,7 @@
 mod day1;
 mod day2;
 mod day3;
+mod day4;
 
 fn main() {
     println!("Let's do this! Advent 2017!!!");
@@ -10,4 +11,6 @@ fn main() {
     println!("day 2, puzzle 2: {}", day2::puzzle2());
     println!("day 3, puzzle 1: {}", day3::puzzle1());
     println!("day 3, puzzle 2: {}", day3::puzzle2());
+    println!("day 4, puzzle 1: {}", day4::puzzle1());
+    println!("day 4, puzzle 2: {}", day4::puzzle2());
 }
